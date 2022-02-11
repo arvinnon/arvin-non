@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.lineicons.com/3.0/lineicons.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/dbed6b6114.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Arvin Non | Web Portfolio</title>
+
+
+   
+<style>
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  
+ 
+}
+.header img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Navigation Bar Styling*/
+.myLogo {
+    width: 250px;
+    cursor: pointer;
+    padding-left: 5%;
+}
+.myNavbar{
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.myNavbar {
+  overflow: hidden;
+  background-color: #ebebeb;
+  /*position: fixed;*/
+}
+.myNavbar a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.myNavbar a:hover {
+  color: orange;
+}
+.myNavbar a.active {
+  color: white;
+}
+.myNavbar .icon {
+  display: none;
+}
+
+.links {
+    padding-right: 10%;
+}
+.myNavbar{
+  font-family: sans-serif, "Helvetica Neue", "Lucida Grande", Arial;
+  font-stretch: expanded;
+}
+
+/*About Section Styling*/
+.about{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 90vh;
+    width: 85vw;
+    margin: 0 auto;
+}
+.content{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content span{
+    height: 0.5px;
+    width: 80px;
+    background: #777;
+    margin: 30px 0;
+}
+.content p{ 
+    padding-bottom: 15px;
+    font-weight: 300;
+   
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+.content h2{
+    width: 80%;
+}
+
+/*Services Section Styling
+.header1 {
+	text-align: left;
+	font-size: 50px;
+	margin-bottom: 80px;
+	font-weight: 700;
+}
+.header1 span {
+	color: deepskyblue;
+}
+*/
+.single-service {
+	padding: 25px;
+	transition: all .5s ease;
+    background-color: #000000;
+}
+.single-service i {
+	font-size: 60px;
+}
+.single-service h2 {
+	font-size: 25px;
+	font-weight: 500;
+}
+.single-service:hover {
+	background: radial-gradient(circle, #fff6f6, #cfcccc);
+	color: rgb(0, 0, 0);
+}
+
+/*Work Section Styling*/
+/*Expertise Styling Section*/
+.header2 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 80px;
+}
+
+.skills-area {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20%;
+}
+
+.skill {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.skill-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.skill-bar {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  height: 20px;
+  z-index: -1;
+  border-radius: 100px;
+  position: absolute;
+}
+
+.skill-fill {
+  background: rgb(255, 102, 0);
+  height: 20px;
+  border-radius: 100px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 30px;
+  overflow: hidden;
+}
+
+.skill-percent {
+  font-size: 30px;
+}
+
+.html {
+  animation: html 2s;
+  width: 50%;
+  background-color: #be7310;
+}
+
+.css {
+  animation: css 2s;
+  width: 80%;
+}
+
+.js {
+  animation: js 2s;
+  width: 70%;
+}
+
+@keyframes html {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes css {
+  from {
+    width: 0;
+  }
+  to {
+    width: 80%;
+  }
+}
+
+@keyframes js {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .skills-area {
+    padding: 0 5%;
+  }
+}
+
+
+/*****************/
+
+@media(max-width: 992px){
+    section{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    .image{
+        height: 100vh;
+    }
+    .content{
+        height: 100vh;
+    }
+    .content h2{
+        font-size: 20px;
+        margin-top: 50px;
+    }
+    .content span{
+        margin: 20px 0;
+    }
+    .content p{
+        font-size: 14px;
+    }
+    
+}
+
+/*responsiveness*/
+@media screen and (max-width: 600px) {
+  .links .myNavbar a:not(:first-child) {display: none;}
+  .links .myNavbar a.icon {
+    float: right;
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  .links .myNavbar.responsive {position: relative;}
+  .links .myNavbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .links .myNavbar.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+/*
+.myPage {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+*/
+
+.myPage{
+    margin-top: 10%;
+    margin-left: 8%;
+    font-size: 17px;
+    letter-spacing: 1px;
+    line-height: 20px;
+    position: absolute;
+    top: 15%;
+    left: 2px;
+}
+.myPage h1 {
+    font-size: 75px;
+    line-height: 160px;
+}
+.myPage p {
+    line-height: 10%;
+    margin-top: 1px;
+    margin-bottom: 30px;
+}
+
+</style>
+</head>
+<body>
+
+    <section id="home" style="background-color: #ebebeb;">
+        <div class="header">
+            <div class="myNavbar" id="myNavbar">
+                <img src ="./myLogo.png" class="myLogo">
+                <div class="links" id="links" style="font-family: 'Michroma', sans-serif; font-weight: 500;">
+                    <b><a href="#about">contact</a></b>
+                    <b><a href="#contact">works</a></b>
+                    <b><a href=#skills>expertise</a></b>
+                    <b><a href=#services>services</a></b>
+                    <b><a href=#about>about</a></b>
+                    <b><a href="#home">home</a></b>
+                </div>
+            </div>
+            <img src="myMain3.png" alt="" style="max-width: 100%; height: auto;">
+        
+            <div class="myPage">
+                <h1 style="font-family: 'Michroma', sans-serif; font-size: 60px;">I am <span class="auto-input" style="color: orangered; font-weight: bold;"></span></h1>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 35px;">Welcome to my official Web Portfolio.  </p><br/>
+                <p style="font-family: 'Montserrat', sans-serif; font-size: 25px;">explore. <span style="color: orangered;">create</span>. improve.</p>
+
+            </div>
+        </div>
+     </section>   
+     
+     <div style="background-color: #ebebeb;">
+    <section class="about" id="about">
+        <img src="myPic.png" alt="" style="width: 130%; padding-right: 10%; ">
+        <div class = "content">
+            <h2 style="font-family: 'Michroma', sans-serif; font-size: 60px; color: orangered; font-weight: 1000;">know about <br/>me</h2>
+            <p style="text-align: justify;font-family: 'Montserrat', sans-serif; font-size: 15px; ">My desire to live a life of creation and address people's
+                actual technical demands drove me to pursue a  Web Development
+                course. My goal is to constantly find a way to balance reality 
+                with aesthetics while also boosting interpersonal interactions.
+
+                <br/><br/>I study Information Technology at Holy Angel University. 
+                With three years of experience in web programming and web 
+                designing.</p>
+    </section>
+    </div>
+
+<br/>
+<br/>
+    <section class="services" id="services">
+        <div class="container">
+            <h1 class="header1" style="font-family: 'Michroma', sans-serif; font-size: 60px; color: orangered; font-weight: 1000;">how do i work?</h1>
+            <br/>
+            <br/>
+            <div class="row">
+                <div class="col s12 m6 l4">
+                    <div class="single-service center-align">
+                        <h2 style="font-family: 'Michroma', sans-serif; font-size: 60px; color: orangered; font-weight: 1000; text-align: left; background-color: transparent;">explore.</h2>
+                        <p style="text-align: justify; font-family: 'Montserrat', sans-serif;background-color: transparent;  ">I like to start at the beginning and asking a few questions to get a sense of who are my client is and how we can come up with a strategy that
+                             meets their needs and creates a user-friendly experience. To design a personalized solution for them, I like to have a comprehensive grasp of 
+                             who they are.</p>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                    <div class="single-service center-align">
+                        <h2 style="font-family: 'Michroma', sans-serif; font-size: 60px; color: orangered; font-weight: 1000; text-align: left; background-color: transparent;">create.</h2>
+                        <p style="text-align: justify; font-family: 'Montserrat', sans-serif;background-color: transparent;  ">
+                            I collaborate with my client to create a design that not only aesthetic looks but also works perfectly. I'll spend as much time as it takes to perfect a concept before 
+                            submitting it to my client. My goal is to provide my clients with a long-lasting web presence that will survive the passing of time. <br/><br/></p>
+                    </div>
+                </div>
+
+                <div class="col s12 m6 l4">
+                    <div class="single-service center-align">
+                        <h2 style="font-family: 'Michroma', sans-serif; font-size: 60px; color: orangered; font-weight: 1000; text-align: left; background-color: transparent;">improve.</h2>
+                        <p style="text-align: justify; font-family: 'Montserrat', sans-serif;background-color: transparent;  ">All of my works are built from the ground up, allowing me to provide my clients with 
+                            totally unique products. I can have complete control over all areas of a project because I am both a designer and a developer, so nothing gets lost in translation. <br/><br/><br/></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js">
+        </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js">    
+        </script>
+    </section>
+
+ <section class="skills" id="skills">
+    <h1 class="header2" style="font-family: 'Michroma', sans-serif; font-size: 60px; color: orangered; font-weight: 1000; text-align: left; padding-left: 15%;">what can i <br/>offer?</h1>
+    <img src="myMain4.png" alt="" style="float: left; width: 30%; padding-left: 10%;">
+    <div class="skills-area" >
+      <div class="skill">
+        <div class="skill-title">web design</div>
+        <div class="skill-bar" style="color: #000000;"></div>
+        <div class="html skill-fill">
+          <span class="skill-percent">50%</span>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">web development</div>
+        <div class="skill-bar"></div>
+        <div class="css skill-fill">
+          <span class="skill-percent">80%</span>
+        </div>
+      </div>
+      <div class="skill">
+        <div class="skill-title">photography</div>
+        <div class="skill-bar"></div>
+        <div class="js skill-fill">
+          <span class="skill-percent">70%</span>
+        </div>
+      </div>
+    </div>
+ </section>  
+
+   
+<section class="works" id="works">
+    
+</section>
+
+    
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script>
+    var typed = new Typed(".auto-input",{
+    strings:["Arvin Non", " a Web Developer", "a Web Designer", "a Photographer"],
+    typeSpeed: 100,
+    backSpeed: 100,
+    loop: true
+    });
+
+</script>
+  
+</body>
+</html>
